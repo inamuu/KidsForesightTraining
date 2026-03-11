@@ -71,18 +71,18 @@ function App() {
       <div className="backdrop backdrop-b" />
       <main className="page-frame">
         <header className="topbar">
-          <p className="eyebrow">Kids Foresight Training</p>
+          <p className="eyebrow">Adventure Training Quest</p>
           <h1>つぎどうする？</h1>
-          <p className="subhead">日常の場面で「先に気づく」「ひとこと伝える」を楽しく練習しよう。</p>
+          <p className="subhead">かけだし冒険者として、先に気づく・伝える・段取りをクエストで練習しよう。</p>
         </header>
 
         {screen === "title" && (
           <section className="screen-card intro-card">
             <div className="intro-copy">
-              <span className="floating-pill">1プレイ 約5〜8分</span>
-              <h2>あせらず選べば大丈夫</h2>
+              <span className="floating-pill">1プレイ 約5〜8分 / 10問</span>
+              <h2>ぼうけんの前に考えよう</h2>
               <p>
-                いろいろな場面で「つぎにどうするとよいかな？」を考えるゲームです。まちがえても学べるので、気楽に試してみてね。
+                村、ギルド、森、見張り台。いろいろなクエストの場面で「つぎにどうするとよいかな？」を考えるゲームです。まちがえても学べるので、気楽に試してみてね。
               </p>
 
               <div className="set-grid">
@@ -102,11 +102,11 @@ function App() {
 
               <div className="action-row">
                 <button className="primary-button" onClick={() => startGame(activeSet.id)} type="button">
-                  スタート
+                  クエスト開始
                 </button>
                 <div className="hint-card">
                   <strong>コツ</strong>
-                  <span>だれが知らないかな？ あとで困ることはないかな？ を思い出そう。</span>
+                  <span>仲間は何を知らないかな？ この先で困ることはないかな？ を思い出そう。</span>
                 </div>
               </div>
             </div>
