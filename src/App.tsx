@@ -277,6 +277,7 @@ function ReviewPanel({
   onNext: () => void;
 }) {
   const verdict = getVerdict(answer.choice.score);
+  const learningTip = question.learningPoints[0];
 
   return (
     <div className={`review-panel tone-${verdict.tone}`}>
@@ -290,17 +291,16 @@ function ReviewPanel({
 
       <div className="feedback-card">
         <p>{answer.choice.feedback}</p>
-        <p>{question.explanation}</p>
       </div>
 
-      <div className="learning-grid">
-        {question.learningPoints.map((point) => (
-          <article key={point.label} className="learning-card">
-            <strong>{point.label}</strong>
-            <p>{point.text}</p>
+      {learningTip && (
+        <div className="learning-grid">
+          <article className="learning-card">
+            <strong>{learningTip.label}</strong>
+            <p>{learningTip.text}</p>
           </article>
-        ))}
-      </div>
+        </div>
+      )}
 
       <button className="primary-button next-button" onClick={onNext} type="button">
         つぎへ
