@@ -1,5 +1,5 @@
 import { CATEGORY_META } from "../data/categories";
-import type { AnswerRecord, CategoryKey, CategoryStat } from "../types";
+import type { AnswerRecord, CategoryKey, Question } from "../types";
 
 export function shuffleItems<T>(items: T[]): T[] {
   const next = [...items];
@@ -10,6 +10,15 @@ export function shuffleItems<T>(items: T[]): T[] {
   }
 
   return next;
+}
+
+export function prepareQuestionQueue(questions: Question[], shuffled = true): Question[] {
+  const baseQuestions = shuffled ? shuffleItems(questions) : [...questions];
+
+  return baseQuestions.map((question) => ({
+    ...question,
+    choices: shuffled ? shuffleItems(question.choices) : [...question.choices],
+  }));
 }
 
 export function getVerdict(score: number) {
@@ -96,4 +105,3 @@ export function calculateResults(answered: AnswerRecord[]) {
     summary: summaryParts.join(" "),
   };
 }
-

@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import titleIllustration from "./assets/illustrations/title-hero.svg";
 import { CATEGORY_META } from "./data/categories";
 import { questionSets } from "./data/questionSets";
-import { calculateResults, getVerdict, shuffleItems } from "./lib/game";
+import { calculateResults, getVerdict, prepareQuestionQueue } from "./lib/game";
 import type {
   AnswerRecord,
   CategoryKey,
@@ -13,6 +13,7 @@ import type {
 } from "./types";
 
 type Screen = "title" | "question" | "review" | "result";
+const CHOICE_LABELS = ["A", "B", "C", "D"];
 
 function App() {
   const [screen, setScreen] = useState<Screen>("title");
@@ -31,7 +32,7 @@ function App() {
   const startGame = (setId: string, reshuffle = true) => {
     const nextSet = questionSets.find((set) => set.id === setId) ?? questionSets[0];
     setActiveSetId(nextSet.id);
-    setQuestionQueue(reshuffle ? shuffleItems(nextSet.questions) : [...nextSet.questions]);
+    setQuestionQueue(prepareQuestionQueue(nextSet.questions, reshuffle));
     setCurrentIndex(0);
     setAnswers([]);
     setScreen("question");
@@ -152,14 +153,14 @@ function App() {
 
                 {screen === "question" && (
                   <div className="choice-list">
-                    {currentQuestion.choices.map((choice) => (
+                    {currentQuestion.choices.map((choice, choiceIndex) => (
                       <button
                         key={choice.id}
                         className="choice-card"
                         onClick={() => handleChoice(choice)}
                         type="button"
                       >
-                        <span className="choice-index">{choice.id.toUpperCase()}</span>
+                        <span className="choice-index">{CHOICE_LABELS[choiceIndex] ?? String(choiceIndex + 1)}</span>
                         <span>{choice.text}</span>
                       </button>
                     ))}
