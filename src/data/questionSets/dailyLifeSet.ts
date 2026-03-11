@@ -9,7 +9,7 @@ import type { QuestionSet } from "../../types";
 export const dailyLifeSet: QuestionSet = {
   id: "daily-life",
   title: "いつもの毎日セット",
-  description: "家・学校・おでかけで使う先読みを20問で練習。",
+  description: "家・学校・おでかけの20問から、毎回10問をランダムで練習。",
   questions: [
     {
       id: "q001",

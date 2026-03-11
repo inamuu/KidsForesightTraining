@@ -14,6 +14,7 @@ import type {
 
 type Screen = "title" | "question" | "review" | "result";
 const CHOICE_LABELS = ["A", "B", "C", "D"];
+const QUESTIONS_PER_PLAY = 10;
 
 function App() {
   const [screen, setScreen] = useState<Screen>("title");
@@ -32,7 +33,7 @@ function App() {
   const startGame = (setId: string, reshuffle = true) => {
     const nextSet = questionSets.find((set) => set.id === setId) ?? questionSets[0];
     setActiveSetId(nextSet.id);
-    setQuestionQueue(prepareQuestionQueue(nextSet.questions, reshuffle));
+    setQuestionQueue(prepareQuestionQueue(nextSet.questions, reshuffle).slice(0, QUESTIONS_PER_PLAY));
     setCurrentIndex(0);
     setAnswers([]);
     setScreen("question");
@@ -78,7 +79,7 @@ function App() {
         {screen === "title" && (
           <section className="screen-card intro-card">
             <div className="intro-copy">
-              <span className="floating-pill">1プレイ 約10〜15分</span>
+              <span className="floating-pill">1プレイ 約5〜8分</span>
               <h2>あせらず選べば大丈夫</h2>
               <p>
                 いろいろな場面で「つぎにどうするとよいかな？」を考えるゲームです。まちがえても学べるので、気楽に試してみてね。
@@ -94,7 +95,7 @@ function App() {
                   >
                     <strong>{set.title}</strong>
                     <span>{set.description}</span>
-                    <small>{set.questions.length}問をランダムに出題</small>
+                    <small>{set.questions.length}問の中から{QUESTIONS_PER_PLAY}問をランダムに出題</small>
                   </button>
                 ))}
               </div>
@@ -226,7 +227,10 @@ function App() {
                         : "いろいろな場面で続けて試してみよう。"
                     }
                   />
-                  <InsightCard label="セット情報" text={`${activeSet.title} / ${activeSet.questions.length}問`} />
+                  <InsightCard
+                    label="セット情報"
+                    text={`${activeSet.title} / ${activeSet.questions.length}問中 ${questionQueue.length}問でプレイ`}
+                  />
                 </div>
               </section>
             </div>
