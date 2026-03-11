@@ -8,7 +8,7 @@
 - サーバー不要の静的アプリ
 - GitHub Pages で公開しやすい `base: "./"` 設定
 - 50 問をデータファイルとして分離し、毎回 10 問をランダム出題
-- カテゴリ別スコア表示あり
+- カテゴリ別経験値表示あり
 - タイトル画面と問題画面で使えるファンタジー風イラスト同梱
 
 ## ローカル起動
@@ -55,7 +55,7 @@ npm run serve:dist
 
 1. `questions` 配列へオブジェクトを追加する
 2. `categories` に `foresight / communication / perspective / planning / responsibility` のいずれかを入れる
-3. `choices` には `score: 0 | 1 | 2` を設定する
+3. `choices` には `score: 0 | 1 | 2` を設定する（内部的には経験値として表示）
 4. `illustration` に `src/assets/illustrations/` 配下の画像を指定する
 
 将来的にセットを増やす場合は、新しい `QuestionSet` ファイルを作り、[`./src/data/questionSets/index.ts`](./src/data/questionSets/index.ts) で配列に追加してください。

@@ -16,6 +16,10 @@ type Screen = "title" | "question" | "review" | "result";
 const CHOICE_LABELS = ["A", "B", "C", "D"];
 const QUESTIONS_PER_PLAY = 10;
 
+function formatExperience(value: number) {
+  return `${value} EXP`;
+}
+
 function App() {
   const [screen, setScreen] = useState<Screen>("title");
   const [activeSetId, setActiveSetId] = useState(questionSets[0].id);
@@ -188,19 +192,19 @@ function App() {
           <section className="screen-card result-card">
             <div className="result-hero">
               <div>
-                <span className="floating-pill">今回のスコア</span>
+                <span className="floating-pill">今回の経験値</span>
                 <h2>{results.headline}</h2>
                 <p>{results.summary}</p>
               </div>
-              <div className="score-ring" aria-label={`合計スコア ${results.totalScore} 点`}>
+              <div className="score-ring" aria-label={`合計経験値 ${formatExperience(results.totalScore)}`}>
                 <strong>{results.totalScore}</strong>
-                <span>/ {results.maxScore}</span>
+                <span>/ {formatExperience(results.maxScore)}</span>
               </div>
             </div>
 
             <div className="result-grid">
               <section className="result-block">
-                <h3>カテゴリごとのようす</h3>
+                <h3>カテゴリごとの経験値</h3>
                 <div className="meter-list">
                   {results.categoryStats.map((stat) => (
                     <ScoreMeter key={stat.key} stat={stat} />
@@ -290,7 +294,7 @@ function ReviewPanel({
           <span className="verdict-label">{verdict.label}</span>
           <h3>{verdict.summary}</h3>
         </div>
-        <div className="point-chip">{answer.choice.score} 点</div>
+        <div className="point-chip">+{formatExperience(answer.choice.score)}</div>
       </div>
 
       <div className="feedback-card">
@@ -342,7 +346,7 @@ function ScoreMeter({ stat }: { stat: CategoryStat }) {
           <p>{meta.description}</p>
         </div>
         <span>
-          {stat.score} / {stat.maxScore}
+          {stat.score} / {stat.maxScore} EXP
         </span>
       </div>
       <div className="meter-track">
