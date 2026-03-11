@@ -336,13 +336,15 @@ img {
 .intro-visual img,
 .scene-illustration {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(235, 248, 255, 0.68));
+    radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.95), rgba(227, 243, 255, 0.82) 52%, rgba(255, 233, 190, 0.7) 100%);
+  aspect-ratio: 32 / 21;
   border-radius: 30px;
   border: 2px solid rgba(166, 223, 255, 0.6);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     0 18px 32px rgba(34, 95, 147, 0.12);
-  padding: 8px;
+  object-fit: contain;
+  padding: 14px;
   width: 100%;
 }
 

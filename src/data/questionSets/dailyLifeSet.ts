@@ -1,11 +1,9 @@
-import busStopIllustration from "../../assets/illustrations/bus-stop.svg";
-import classroomIllustration from "../../assets/illustrations/classroom.svg";
-import dinnerIllustration from "../../assets/illustrations/dinner-time.svg";
-import homeChatIllustration from "../../assets/illustrations/home-chat.svg";
-import libraryIllustration from "../../assets/illustrations/library.svg";
-import rainyTripIllustration from "../../assets/illustrations/rainy-trip.svg";
-import schoolMorningIllustration from "../../assets/illustrations/school-morning.svg";
-import studyRoomIllustration from "../../assets/illustrations/study-room.svg";
+import dragonIllustration from "../../assets/illustrations/raster/dragon.png";
+import dwarfIllustration from "../../assets/illustrations/raster/dwarf-guardian.png";
+import archerIllustration from "../../assets/illustrations/raster/forest-archer.png";
+import heroIllustration from "../../assets/illustrations/raster/hero-knight.png";
+import treasureIllustration from "../../assets/illustrations/raster/treasure-chest.png";
+import wizardIllustration from "../../assets/illustrations/raster/wizard.png";
 import type { QuestionSet } from "../../types";
 
 export const dailyLifeSet: QuestionSet = {
@@ -46,7 +44,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "だれに言う？", text: "家にいる大人へ、出る前にひとこと伝えるのが大切だよ。" },
         { label: "先にできること", text: "出かける前の声かけを、いつもの習慣にしてみよう。" },
       ],
-      illustration: homeChatIllustration,
+      illustration: heroIllustration,
       tags: ["家族", "声かけ", "予定"],
     },
     {
@@ -82,7 +80,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "どんな声かけ？", text: "急かすより、やさしく短く伝えると受け取りやすいよ。" },
         { label: "先に動くコツ", text: "気づいた人が一歩先に動くと、全体がスムーズになるよ。" },
       ],
-      illustration: homeChatIllustration,
+      illustration: dwarfIllustration,
       tags: ["家族", "出発", "主体性"],
     },
     {
@@ -118,7 +116,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "何を準備する？", text: "折りたたみ傘のように、軽くて持ちやすい物が役立つよ。" },
         { label: "段取りのコツ", text: "出る直前に迷わないよう、前もって確認できるといいね。" },
       ],
-      illustration: rainyTripIllustration,
+      illustration: dragonIllustration,
       tags: ["天気", "持ちもの", "準備"],
     },
     {
@@ -154,7 +152,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "どの順番？", text: "先に必要なこと、そのあと楽しみ、の順にすると分かりやすいよ。" },
         { label: "続けるコツ", text: "帰ったら最初にやることを決めておくと動きやすいよ。" },
       ],
-      illustration: studyRoomIllustration,
+      illustration: wizardIllustration,
       tags: ["宿題", "時間", "順番"],
     },
     {
@@ -190,7 +188,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "何を決める？", text: "行くかどうかだけでなく、帰る時間も決めるとよいよ。" },
         { label: "うまく遊ぶには", text: "予定を合わせると、あとであわてずにすむよ。" },
       ],
-      illustration: dinnerIllustration,
+      illustration: heroIllustration,
       tags: ["夕ごはん", "相談", "時間"],
     },
     {
@@ -226,7 +224,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "いつ準備する？", text: "夜のうちなら、足りない物にも気づきやすいよ。" },
         { label: "次につながる", text: "前日チェックを習慣にすると、忘れ物が減りやすいよ。" },
       ],
-      illustration: schoolMorningIllustration,
+      illustration: archerIllustration,
       tags: ["学校", "前日準備", "忘れ物"],
     },
     {
@@ -262,7 +260,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "いつ伝える？", text: "遅れると分かった時点で伝えるのがいちばん役立つよ。" },
         { label: "自分から動く", text: "気まずくても、先に伝えることが大切だよ。" },
       ],
-      illustration: busStopIllustration,
+      illustration: dwarfIllustration,
       tags: ["待ち合わせ", "連絡", "遅刻"],
     },
     {
@@ -298,7 +296,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "何を確認する？", text: "時間や場所など、家族の予定を先に確かめよう。" },
         { label: "返事のコツ", text: "すぐ決められないときは『確認してから返事するね』で大丈夫。" },
       ],
-      illustration: homeChatIllustration,
+      illustration: wizardIllustration,
       tags: ["予定", "相談", "家族"],
     },
     {
@@ -334,7 +332,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "どう決める？", text: "家の人や弟と相談して、その日に合う順番を決めよう。" },
         { label: "段取りの工夫", text: "少し順番を変えるだけで、みんなが楽になることもあるよ。" },
       ],
-      illustration: dinnerIllustration,
+      illustration: dwarfIllustration,
       tags: ["家族", "順番", "気づき"],
     },
     {
@@ -370,7 +368,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "何を伝える？", text: "入口、時間、目印などを短くはっきり伝えるとよいよ。" },
         { label: "先に決める", text: "あとで探し回らないよう、前もって決めておこう。" },
       ],
-      illustration: libraryIllustration,
+      illustration: archerIllustration,
       tags: ["待ち合わせ", "場所", "説明"],
     },
     {
@@ -406,7 +404,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "だれに言う？", text: "その場で助けてもらえる先生へ、まず伝えてみよう。" },
         { label: "次に生かす", text: "前日の準備や持ちものチェックにもつながるよ。" },
       ],
-      illustration: classroomIllustration,
+      illustration: heroIllustration,
       tags: ["学校", "忘れ物", "相談"],
     },
     {
@@ -442,7 +440,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "どのくらい話す？", text: "長くなくて大丈夫。短くはっきり伝えれば十分だよ。" },
         { label: "身近な場面", text: "お店や駅など、人が多い場所ほど声かけが役立つよ。" },
       ],
-      illustration: busStopIllustration,
+      illustration: treasureIllustration,
       tags: ["外出", "声かけ", "安心"],
     },
     {
@@ -478,7 +476,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "順番の考え方", text: "先に済ませると安心なことから進めるとよいよ。" },
         { label: "朝のコツ", text: "毎朝の順番が決まると、迷う時間が減るよ。" },
       ],
-      illustration: schoolMorningIllustration,
+      illustration: archerIllustration,
       tags: ["朝", "逆算", "学校"],
     },
     {
@@ -514,7 +512,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "いつ動く？", text: "次の予定が始まる前に、少しでも動いておくのがコツだよ。" },
         { label: "小さく始める", text: "全部でなくても、まず大きい物から片づけるだけでも前進だよ。" },
       ],
-      illustration: studyRoomIllustration,
+      illustration: treasureIllustration,
       tags: ["片づけ", "切り替え", "自分から"],
     },
     {
@@ -550,7 +548,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "だれに必要？", text: "家の人は、早めに手紙を見られると助かるよ。" },
         { label: "習慣にする", text: "帰ったら手紙を出す流れを決めておくと続きやすいよ。" },
       ],
-      illustration: homeChatIllustration,
+      illustration: wizardIllustration,
       tags: ["連絡物", "学校", "忘れ防止"],
     },
     {
@@ -586,7 +584,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "確認のしかた", text: "持ちものリストを見ながら一つずつチェックすると分かりやすいよ。" },
         { label: "当日の朝", text: "残るのはおべんとうなど、その日でないと入れられない物だけにしよう。" },
       ],
-      illustration: schoolMorningIllustration,
+      illustration: heroIllustration,
       tags: ["遠足", "前日", "持ちもの"],
     },
     {
@@ -622,7 +620,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "なぜ早め？", text: "道で少し遅れても、乗れるようにしておくためだよ。" },
         { label: "先読みのコツ", text: "『一本のがしたらどうなる？』も考えてみよう。" },
       ],
-      illustration: busStopIllustration,
+      illustration: dwarfIllustration,
       tags: ["交通", "時間", "外出"],
     },
     {
@@ -658,7 +656,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "何を準備する？", text: "出かける前に、本をバッグの近くへ置いておくのも手だよ。" },
         { label: "自分の役目", text: "借りた物の期限を覚えて動くのも大事な力だよ。" },
       ],
-      illustration: libraryIllustration,
+      illustration: treasureIllustration,
       tags: ["図書館", "返却", "責任"],
     },
     {
@@ -694,7 +692,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "自分にできること", text: "静かに着替えたり、持ちものをそろえたりできるね。" },
         { label: "先読み", text: "音が出そうなことは後に回す工夫も役立つよ。" },
       ],
-      illustration: homeChatIllustration,
+      illustration: wizardIllustration,
       tags: ["朝", "家族", "静かに"],
     },
     {
@@ -730,7 +728,7 @@ export const dailyLifeSet: QuestionSet = {
         { label: "だれに伝える？", text: "来そうな友だちや、予定を気にしている人へ伝えるとよいよ。" },
         { label: "先に気づく力", text: "変更があったときほど、『まだ知らない人は？』を思い出そう。" },
       ],
-      illustration: rainyTripIllustration,
+      illustration: dragonIllustration,
       tags: ["予定変更", "雨", "共有"],
     },
   ],

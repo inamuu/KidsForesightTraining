@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { useMemo, useState } from "react";
-import titleIllustration from "./assets/illustrations/title-hero.svg";
+import titleIllustration from "./assets/illustrations/raster/fantasy-party-title.png";
 import { CATEGORY_META } from "./data/categories";
 import { questionSets } from "./data/questionSets";
 import { calculateResults, getVerdict, prepareQuestionQueue } from "./lib/game";
